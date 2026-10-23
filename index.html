@@ -3,58 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIWEB2627</title>
+    <title>DIWEB 26/27 - Portfolio</title>
+    <!-- Importación de tipografía desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --border-color: #334155;
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .student-info {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Cuadrícula de Temas */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Estilo de Tarjetas */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.4);
+            border-color: #475569;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Lista de Enlaces */
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.6rem 0.9rem;
+            background-color: #0f172a;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        ul li a:hover {
+            background-color: #1e293b;
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            padding-left: 1.1rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .tag-pdf { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .tag-img { background-color: rgba(234, 179, 8, 0.2); color: #facc15; }
+        .tag-html { background-color: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .tag-figma { background-color: rgba(168, 85, 247, 0.2); color: #c084fc; }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Desarrollo de interfaces web</h1>
-    <p>Portfolio con las actividades realizadas durante el curso 26/27 en la asignatura DIWEB.</p>
-    <h2>Tema 1</h2>
-    <ul>
-        <li>
-            <a href="Ejercicios/Tema%201/Línea%20del%20tiempo%20Web.png" target="_blank" rel="noopener noreferrer">Ver ejercicio 1</a>
-        </li>
-        <li>
-            <a href="Ejercicios/Tema%201/T1E2_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 2</a>
-        </li>
-        <li>
-            <a href="Ejercicios/Tema%201/T1E3_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 3</a>
-        </li>
-        <li>
-            <a href="Ejercicios/Tema%201/T1E4_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 4</a>
-        </li>
-        <li>
-            <a href="Ejercicios/Tema%201/T1E5_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 5</a>
-        </li>
-    </ul>
-    <h2>Tema 2</h2>
-    <ul>    
-        <li>
-            <a href="Ejercicios/Tema%202/T2E1_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 1</a>
-        </li>
-        <li>
-            <a href="Ejercicios/Tema%202/T2E2_JuanMiguelCandilPacheco.html" target="_blank" rel="noopener noreferrer">Ver ejercicio 2</a>
-        </li>
-	<li>
-            <a href="Ejercicios/Tema%202/T2E3_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 3</a>
-        </li>
-    </ul>
-    <h2>Tema 3</h2>
-    <ul>
-        <li>
-            <a href="Ejercicios/Tema%203/Ejercicio%201/index.html" target="_blank" rel="noopener noreferrer">Ver ejercicio 1</a>
-        </li>
-        <li>
-            <a href="Ejercicios/Tema 3/Ejercicio 2/CamScanner 15-10-26 17.55.pdf" target="_blank" rel="noopener noreferrer">Ver Sketch</a>
-        </li>
-        <li>
-            <a href="https://www.figma.com/design/AMIw8CM6FGffwXomva35fL/Index_mockup?node-id=3-104&t=iMCVTPkAxoCmVoA7-1" target="_blank" rel="noopener noreferrer">Ejercicio Figma</a>
-        </li>
-    </ul>
-    <h2>Tema 4</h2>
-    <ul>
-        <li>
-            <a href="Ejercicios/Tema%204/T4E1_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">Ver ejercicio 1</a>
-        </li>
-    </ul>
+
+    <div class="container">
+        <header>
+            <h1>Desarrollo de Interfaces Web</h1>
+            <p>Portfolio con las actividades realizadas durante el curso 26/27</p>
+            <div class="student-info">Juan Miguel Candil Pacheco</div>
+        </header>
+
+        <main class="grid">
+            <!-- Tema 1 -->
+            <section class="card">
+                <h2>📁 Tema 1</h2>
+                <ul>
+                    <li>
+                        <a href="Ejercicios/Tema%201/Línea%20del%20tiempo%20Web.png" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 1</span>
+                            <span class="tag tag-img">PNG</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%201/T1E2_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 2</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%201/T1E3_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 3</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%201/T1E4_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 4</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%201/T1E5_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 5</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Tema 2 -->
+            <section class="card">
+                <h2>📁 Tema 2</h2>
+                <ul>
+                    <li>
+                        <a href="Ejercicios/Tema%202/T2E1_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 1</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%202/T2E2_JuanMiguelCandilPacheco.html" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 2</span>
+                            <span class="tag tag-html">HTML</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%202/T2E3_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 3</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Tema 3 -->
+            <section class="card">
+                <h2>📁 Tema 3</h2>
+                <ul>
+                    <li>
+                        <a href="Ejercicios/Tema%203/Ejercicio%201/index.html" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 1</span>
+                            <span class="tag tag-html">HTML</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema 3/Ejercicio 2/CamScanner 15-10-26 17.55.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ver Sketch</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.figma.com/design/AMIw8CM6FGffwXomva35fL/Index_mockup?node-id=3-104&t=iMCVTPkAxoCmVoA7-1" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio Figma</span>
+                            <span class="tag tag-figma">Figma</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Tema 4 -->
+            <section class="card">
+                <h2>📁 Tema 4</h2>
+                <ul>
+                    <li>
+                        <a href="Ejercicios/Tema%204/T4E1_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 1</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%204/T4E2_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 2</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ejercicios/Tema%204/T4E3_JuanMiguelCandilPacheco.pdf" target="_blank" rel="noopener noreferrer">
+                            <span>Ejercicio 3</span>
+                            <span class="tag tag-pdf">PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>DIWEB2627 &bull; Asignatura Desarrollo de Interfaces Web</p>
+        </footer>
+    </div>
+
 </body>
 </html>
