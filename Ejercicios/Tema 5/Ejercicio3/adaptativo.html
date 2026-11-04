@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modelo adaptativo</title>
+        <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+}
+.contenedor {
+    width: 960px;
+    margin: auto;
+}
+header {
+    background: #7c3aed;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+nav {
+    background: #5b21b6;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+section {
+    width: 65%;
+    background: #ede9fe;
+    padding: 20px;
+}
+aside {
+    width: 35%;
+    background: #ddd6fe;
+    padding: 20px;
+}
+footer {
+    background: #7c3aed;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .contenedor {
+        width: 750px;
+    }
+    main {
+        gap: 10px;
+    }
+    section {
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+    .contenedor {
+        width: 360px;
+    }
+    main {
+        display: block;
+    }
+    section, aside {
+        width: auto;
+        margin-bottom: 10px;
+    }
+}
+</style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <h1>Mi página tecnológica</h1>
+                <p>Modelo de diseño adaptativo</p>
+            </header>
+            <nav>Inicio | Servicios | Contacto</nav>
+            <main>
+                <section>
+                    <h2>Bienvenido</h2>
+                    <p>Esta página utiliza un modelo adaptativo.
+                        Presenta diseños específicos para ordenador,
+                        tablet y móvil según el ancho de pantalla.</p>
+                </section>
+                <aside>
+                    <h3>Información</h3>
+                    <p>El diseño cambia entre distribuciones
+                        predefinidas.</p>
+                </aside>
+            </main>
+            <footer>© 2026 - Mi página web</footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modelo responsivo</title>
+        <style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+header {
+    background: #ea580c;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+nav {
+    background: #c2410c;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+section {
+    flex: 2;
+    min-width: 250px;
+    padding: 20px;
+    background: #ffedd5;
+}
+aside {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    background: #fed7aa;
+}
+footer {
+    background: #ea580c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    header {
+        padding: 20px;
+    }
+    nav {
+        font-size: 14px;
+    }
+}
+</style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <h1>Mi página tecnológica</h1>
+                <p>Modelo de diseño responsivo</p>
+            </header>
+            <nav>Inicio | Servicios | Contacto</nav>
+            <main>
+                <section>
+                    <h2>Bienvenido</h2>
+                    <p>Esta página utiliza un modelo responsivo.
+                        Los elementos cambian de tamaño y posición
+                        de forma flexible para adaptarse a ordenadores,
+                        tablets y teléfonos móviles.</p>
+                </section>
+                <aside>
+                    <h3>Información</h3>
+                    <p>El contenido se reorganiza para mejorar
+                        la experiencia en cualquier pantalla.</p>
+                </aside>
+            </main>
+            <footer>© 2026 - Mi página web</footer>
+        </div>
+    </body>
+</html>
