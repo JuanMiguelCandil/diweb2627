@@ -1,0 +1,23 @@
+h1 {
+    color: blue;
+    font-size: 30px;
+}
+
+p {
+    color: black;
+}
+
+/* Cuestiones
+¿De qué color aparece el título?
+- El título aparecera de color verde
+¿Qué tamaño tiene el título?
+- El título tiene tamaño 30px
+¿De qué color aparece el primer párrafo?
+- El primer párrafo aparece de color naranja
+¿De qué color aparece el segundo párrafo?
+- El segundo párrafo aparece de color rojo
+Modifica el HTML para que el título aparezca en negro utilizando un estilo en línea.
+Elimina los estilos internos. ¿Qué sucede con los colores?
+- El tamaño de los textos se vuelve más pequeño y al primer
+párrafo se le borra el color y se vuelve negro
+*/
