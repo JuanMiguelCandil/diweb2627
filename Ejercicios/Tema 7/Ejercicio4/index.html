@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIWEB - Ejercicio 4 Tema 7</title>
+    <style>
+        p {
+            color: blue;
+        }
+        .mensaje {
+            color: green;
+        }
+        p.destacado {
+            color: orange;
+        }
+        #principal p {
+            color: red;
+        } 
+        .mensaje.destacado {
+            color: purple;
+        }
+
+        /*
+        Preguntas:
+        1. ¿Qué color tendrá el texto?
+        El texto tiene el color rojo.
+        2. ¿Qué selector tiene mayor especificidad?
+        El selector más específico es el #principal p.
+        3. ¿Qué ocurriría si eliminamos el selector #principal p?
+        El texto sería morado, es decir, el selector más 
+        específico sería la clase del párrafo.
+        4. ¿Qué sucedería si añadimos otra regla .mensaje.destacado al final?
+        No sucedería nada, el texto sigue siendo rojo.
+        5. ¿Qué buenas prácticas aplicarías para evitar este tipo de conflictos?
+        Evitar utilizar selectores con demasiada especificidad y organizar 
+        las reglas CSS para evitar conflictos entre ellas.
+        */
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <p class="mensaje destacado">
+            Hola, DAW
+        </p>
+    </div>
+</body>
+</html>
